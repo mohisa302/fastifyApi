@@ -1,5 +1,5 @@
 const items = require('../items');
-const {getItem, getItems, addItem} = require('../controllers/items');
+const {getItem, getItems, addItem, deleteItem, updateItem} = require('../controllers/items');
 
 const Item ={
     type: 'object',
@@ -39,8 +39,39 @@ const postItemsOpts = {
             //if reply correctly
             201: Item,
         },
+        body: {
+            type:'object',
+            required : ['name'],
+            properties: {
+                name: {type: 'string'},
+            },
+        },
     },
     handler: addItem,
+};
+
+const deleteItemOpts = {
+    schema : {
+        response: {
+            200: {
+                type: 'object',
+                properties: {
+                    id: { type: 'string'},
+                    message: { type: 'string'}
+                },
+            },
+        },
+    },
+    handler: deleteItem,
+};
+
+const updateItemOpts = {
+    schema : {
+        response: {
+            200: Item,
+        },
+    },
+    handler: updateItem,
 };
 
 module.exports = function itemRoutes (app, options, done) {
@@ -50,5 +81,9 @@ module.exports = function itemRoutes (app, options, done) {
 
     app.post('/items', postItemsOpts);
     
+    app.delete('/item/:id', deleteItemOpts);
+
+    app.put('/item/:id', updateItemOpts);
+
     done();
 }
