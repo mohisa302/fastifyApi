@@ -1,0 +1,14 @@
+#get all
+#GET http://127.0.0.1:5000/items HTTP/1.1
+
+#get one
+#GET http://127.0.0.1:5000/item/1 HTTP/1.1
+
+#add one
+POST  http://127.0.0.1:5000/items HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "New Item"
+}
+
