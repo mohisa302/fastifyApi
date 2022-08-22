@@ -1,0 +1,2 @@
+# fastifyApi
+coding for practice from https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbVlTWjJqV0ltQUNWY0I5cy1Wdi1PX2g4NTJnd3xBQ3Jtc0tsZXVCaEQyZ3k4akozTFpFREZLaHB2VzVVWXVkM3pSalRkMHR2RE9QV3AtQmY4U085aGVaSGR5MDVyU0xjOVlQQ3BuYjBrMnkzQkJLVkV5dFRER2lKZVNkVGNwclE3d3ZpWEZSbWdPRWFwN01DWVo4dw&q=https%3A%2F%2Fgithub.com%2Fbradtraversy%2Ffastify-crash-course&v=Lk-uVEVGxOA
